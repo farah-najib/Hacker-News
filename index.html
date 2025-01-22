@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacker News</title>
+</head>
+<body>
+<div class="container">
+    <h1>Hacker News Search</h1>
+    <div id="search-form">
+        <input type="text" id="search-query" placeholder="Search for news..." />
+        <button id="search-button">Search</button>
+        <select id="sort-by">
+            <option value="created_at_i">Sort by Time</option>
+            <option value="points">Sort by Points</option>
+        </select>
+    </div>
+    <div id="news-list"></div>
+    <div id="pagination">
+        <button id="prev-button">Previous</button>
+        <span id="current-page">Page 1</span>
+        <button id="next-button">Next</button>
+    </div>
+</div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+$primary-color: #0066cc;
+$font-family: Arial, sans-serif;
+
+body {
+  font-family: $font-family;
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+    #search-form {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+
+      #search-query {
+        padding: 10px;
+        width: 100%;
+        max-width: 300px;
+        margin-right: 10px;
+      }
+    }
+
+    #news-list {
+      margin-top: 20px;
+
+      .news-item {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+
+        h3 {
+          margin: 0;
+
+          a {
+            text-decoration: none;
+            color: $primary-color;
+
+            &:hover {
+              text-decoration: underline; // Add hover effect for links
+            }
+          }
+        }
+      }
+    }
+
+    #pagination {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+
+      button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: $primary-color;
+        color: white;
+        cursor: pointer;
+
+        &:disabled {
+          background-color: gray;
+          cursor: not-allowed;
+        }
+
+        &:hover:not(:disabled) {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+}
